@@ -106,12 +106,6 @@ const videos = [
     file: "/videos/v2.mp4",
   },
 
-  {
-    id: "18",
-    title: "Brand Edit",
-    category: "Kia",
-    file: "/videos/v3.mp4",
-  },
 
   {
     id: "19",
@@ -128,14 +122,14 @@ const videos = [
 
   {
     id: "21",
-    title: "Wedding Edit",
-    category: "LONG FROM",
+    title: "Product Edit",
+    category: "REEL",
     file: "/videos/v6.mp4",
   },
   {
     id: "22",
-    title: "Wedding Edit",
-    category: "LONG FROM",
+    title: "Product Edit",
+    category: "AD",
     file: "/videos/v7.mp4",
   },
 
@@ -158,102 +152,77 @@ const videos = [
     category: "REEL",
     file: "/videos/v21.mp4",
   },
-   {
-    id: "26",
-    title: "AI Reel",
-    category: "REEL",
-    file: "/videos/v10.mp4",
-  },
-   {
-    id: "27",
-    title: "Travel Edit",
-    category: "REEl",
-    file: "/videos/v11.mp4",
-  },
+   
+   
 
   {
-    id: "28",
+    id: "26",
     title: "Commercial Reel",
     category: "REEL",
     file: "/videos/v12.mp4",
   },
+  
    {
-    id: "29",
-    title: "Education Reel",
-    category: "REEL",
-    file: "/videos/v13.mp4",
-  },
-   {
-    id: "30",
+    id: "27",
     title: "Product Campaign",
     category: "COMMERCIAL",
     file: "/videos/v14.mp4",
   },
 
   {
-    id: "31",
+    id: "28",
     title: "Social Media Reel",
     category: "REEL",
     file: "/videos/v15.mp4",
   },
    {
-    id: "32",
+    id: "29",
     title: "Fashion Reel",
     category: "REEL",
     file: "/videos/v16.mp4",
   },
    {
-    id: "33",
+    id: "30",
     title: "Product Campaign",
     category: "COMMERCIAL",
     file: "/videos/v17.mp4",
   },
 
   {
-    id: "34",
+    id: "31",
     title: "GYM Reel",
     category: "REEL",
     file: "/videos/v18.mp4",
   },
- {
-    id: "35",
-    title: "Event Edits ",
-    category: "REEL",
-    file: "/videos/v19.mp4",
-  },
+ 
    {
-    id: "36",
+    id: "32",
     title: "Brand Edit",
     category: "COMMERCIAL",
     file: "/videos/v20.mp4",
   },
 
   {
-    id: "37",
+    id: "33",
     title: "Product Reel",
     category: "PRODUCT",
     file: "/videos/v24.mp4",
   },
 
    {
-    id: "38",
+    id: "34",
     title: "AD Reel",
     category: "AD",
     file: "/videos/v22.mp4",
   },
    {
-    id: "39",
+    id: "35",
     title: "Product Reel",
     category: "COMMERCIAL",
     file: "/videos/v23.mp4",
   },
 
-  {
-    id: "40",
-    title: "Wedding Edits",
-    category: "LONG FROM",
-    file: "/videos/v25.mp4",
-  },
+
 ];
 
 function Showreel() {
