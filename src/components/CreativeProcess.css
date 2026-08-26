@@ -1,0 +1,1100 @@
+/* =========================================================
+   CREATIVE PROCESS
+========================================================= */
+
+.process-section {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  padding:
+    180px
+    5vw
+    150px;
+
+  background: #050505;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.process-bg-word {
+  position: absolute;
+
+  right: -8vw;
+
+  top: 35%;
+
+  color: rgba(255,255,255,0.015);
+
+  font-size:
+    clamp(
+      220px,
+      34vw,
+      600px
+    );
+
+  font-weight: 900;
+
+  line-height: 0.7;
+
+  letter-spacing: -0.12em;
+
+  transform:
+    rotate(-90deg);
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.process-header {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  margin-bottom: 130px;
+}
+
+
+.process-heading {
+  display: flex;
+
+  gap: 25px;
+
+  align-items: flex-start;
+}
+
+
+.process-number {
+  margin-top: 15px;
+
+  color: #d8ff3e;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 0.1em;
+}
+
+
+.process-eyebrow {
+  margin:
+    0
+    0
+    18px;
+
+  color: #555;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.16em;
+}
+
+
+.process-heading h2 {
+  margin: 0;
+
+  color: #eee;
+
+  font-size:
+    clamp(
+      58px,
+      8.5vw,
+      140px
+    );
+
+  font-weight: 900;
+
+  line-height: 0.79;
+
+  letter-spacing: -0.085em;
+}
+
+
+.process-heading h2 span {
+  color: transparent;
+
+  -webkit-text-stroke:
+    1px
+    #555;
+
+  transition:
+    color 0.5s ease,
+    -webkit-text-stroke-color 0.5s ease;
+}
+
+
+.process-heading:hover h2 span {
+  color:
+    rgba(216,255,62,0.04);
+
+  -webkit-text-stroke-color:
+    #d8ff3e;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.process-intro {
+  min-width: 180px;
+
+  padding-bottom: 5px;
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,0.1);
+}
+
+
+.process-intro span {
+  color: #d8ff3e;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.15em;
+}
+
+
+.process-intro p {
+  margin:
+    15px
+    0
+    0;
+
+  color: #555;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  line-height: 1.8;
+
+  letter-spacing: 0.05em;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.process-timeline {
+  position: relative;
+
+  z-index: 3;
+
+  max-width: 1250px;
+
+  margin:
+    0
+    auto;
+}
+
+
+/* =========================================================
+   TRACK
+========================================================= */
+
+.process-track {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  top: 30px;
+
+  height: 1px;
+
+  background:
+    rgba(255,255,255,0.1);
+
+  overflow: hidden;
+}
+
+
+.process-track-progress {
+  height: 100%;
+
+  background: #d8ff3e;
+
+  box-shadow:
+    0 0 15px
+    rgba(216,255,62,0.5);
+
+  transition:
+    width 0.6s cubic-bezier(.16,1,.3,1);
+}
+
+
+/* =========================================================
+   STEPS
+========================================================= */
+
+.process-steps {
+  display: grid;
+
+  grid-template-columns:
+    repeat(6, 1fr);
+
+  position: relative;
+}
+
+
+.process-step {
+
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 15px;
+
+  min-height: 105px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #444;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+
+.process-step-number {
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.1em;
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.process-step-dot {
+
+  position: relative;
+
+  width: 9px;
+  height: 9px;
+
+  margin-top: 1px;
+
+  border:
+    1px solid
+    #444;
+
+  border-radius: 50%;
+
+  background: #050505;
+
+  z-index: 2;
+
+  transition:
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+.process-step-dot span {
+
+  position: absolute;
+
+  width: 3px;
+  height: 3px;
+
+  top: 50%;
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: #444;
+
+  transition:
+    background 0.4s ease;
+}
+
+
+.process-step-title {
+
+  color: #555;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.02em;
+
+  transition:
+    color 0.4s ease,
+    transform 0.5s cubic-bezier(.16,1,.3,1);
+}
+
+
+.process-step:hover
+.process-step-title,
+.process-step.active
+.process-step-title {
+
+  color: #eee;
+
+  transform:
+    translateY(-3px);
+}
+
+
+.process-step:hover
+.process-step-number,
+.process-step.active
+.process-step-number {
+
+  color: #d8ff3e;
+}
+
+
+.process-step:hover
+.process-step-dot,
+.process-step.active
+.process-step-dot {
+
+  border-color: #d8ff3e;
+
+  box-shadow:
+    0 0 20px
+    rgba(216,255,62,0.35);
+}
+
+
+.process-step:hover
+.process-step-dot span,
+.process-step.active
+.process-step-dot span {
+
+  background: #d8ff3e;
+}
+
+
+/* =========================================================
+   DETAIL
+========================================================= */
+
+.process-detail {
+
+  display: grid;
+
+  grid-template-columns:
+    80px
+    1fr
+    minmax(300px, 0.7fr);
+
+  gap: 40px;
+
+  align-items: center;
+
+  margin-top: 80px;
+
+  padding:
+    45px
+    0;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,0.08);
+}
+
+
+.process-detail-number {
+
+  color: #d8ff3e;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+}
+
+
+.process-detail-label {
+
+  margin: 0 0 10px;
+
+  color: #555;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.15em;
+}
+
+
+.process-detail-main h3 {
+
+  margin: 0;
+
+  color: #eee;
+
+  font-size:
+    clamp(
+      38px,
+      5vw,
+      80px
+    );
+
+  font-weight: 900;
+
+  line-height: 0.85;
+
+  letter-spacing: -0.065em;
+}
+
+
+.process-detail-description {
+
+  max-width: 500px;
+
+  margin:
+    25px
+    0
+    0;
+
+  color: #555;
+
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   TIMELINE FRAME
+========================================================= */
+
+.process-frame {
+
+  position: relative;
+
+  aspect-ratio: 1.5;
+
+  border:
+    1px
+    solid
+    rgba(255,255,255,0.12);
+
+  background:
+    linear-gradient(
+      145deg,
+      #101010,
+      #060606
+    );
+
+  overflow: hidden;
+}
+
+
+.process-frame::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 24px,
+      rgba(255,255,255,0.025) 25px
+    );
+}
+
+
+.process-frame-top {
+
+  position: absolute;
+
+  top: 15px;
+
+  left: 15px;
+  right: 15px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  color: #444;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 6px;
+
+  letter-spacing: 0.1em;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   FRAME LINES
+========================================================= */
+
+.process-frame-lines {
+
+  position: absolute;
+
+  left: 20px;
+  right: 20px;
+
+  bottom: 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+.process-frame-lines span {
+
+  display: block;
+
+  height: 8px;
+
+  border-radius: 2px;
+
+  background:
+    rgba(216,255,62,0.12);
+
+  animation:
+    timelineClip
+    2.5s
+    ease-in-out
+    infinite;
+}
+
+
+.process-frame-lines span:nth-child(1) {
+  width: 55%;
+}
+
+.process-frame-lines span:nth-child(2) {
+  width: 80%;
+
+  animation-delay: 0.2s;
+}
+
+.process-frame-lines span:nth-child(3) {
+  width: 65%;
+
+  animation-delay: 0.4s;
+}
+
+.process-frame-lines span:nth-child(4) {
+  width: 90%;
+
+  animation-delay: 0.6s;
+}
+
+
+@keyframes timelineClip {
+
+  0%,
+  100% {
+    transform:
+      scaleX(0.85);
+
+    transform-origin: left;
+  }
+
+  50% {
+    transform:
+      scaleX(1);
+
+    background:
+      rgba(216,255,62,0.25);
+  }
+
+}
+
+
+/* =========================================================
+   PLAYHEAD
+========================================================= */
+
+.process-playhead {
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 45%;
+
+  width: 1px;
+
+  background: #d8ff3e;
+
+  box-shadow:
+    0 0 15px
+    rgba(216,255,62,0.5);
+
+  animation:
+    playheadMove
+    3s
+    ease-in-out
+    infinite;
+}
+
+
+.process-playhead span {
+
+  position: absolute;
+
+  top: 0;
+
+  left: 50%;
+
+  width: 8px;
+  height: 8px;
+
+  background: #d8ff3e;
+
+  transform:
+    translateX(-50%)
+    rotate(45deg);
+}
+
+
+@keyframes playheadMove {
+
+  0% {
+    left: 20%;
+  }
+
+  50% {
+    left: 75%;
+  }
+
+  100% {
+    left: 20%;
+  }
+
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.process-bottom {
+
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 25px;
+
+  margin-top: 100px;
+
+  color: #444;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.14em;
+}
+
+
+.process-bottom strong {
+
+  color: #d8ff3e;
+
+  font-size: 11px;
+}
+
+
+.process-bottom-arrow {
+
+  color: #555;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .process-section {
+
+    padding:
+      140px
+      4vw
+      120px;
+  }
+
+
+  .process-header {
+
+    margin-bottom: 90px;
+  }
+
+
+  .process-heading h2 {
+
+    font-size: 11vw;
+  }
+
+
+  .process-step-title {
+
+    font-size: 10px;
+  }
+
+
+  .process-detail {
+
+    grid-template-columns:
+      60px
+      1fr
+      0.7fr;
+
+    gap: 25px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .process-section {
+
+    min-height: auto;
+
+    padding:
+      110px
+      6vw
+      100px;
+  }
+
+
+  .process-bg-word {
+
+    top: 30%;
+
+    right: -30vw;
+
+    font-size: 65vw;
+  }
+
+
+  .process-header {
+
+    display: block;
+
+    margin-bottom: 65px;
+  }
+
+
+  .process-heading {
+
+    gap: 12px;
+  }
+
+
+  .process-number {
+
+    margin-top: 8px;
+
+    font-size: 7px;
+  }
+
+
+  .process-eyebrow {
+
+    margin-bottom: 13px;
+
+    font-size: 7px;
+  }
+
+
+  .process-heading h2 {
+
+    font-size: 15.5vw;
+
+    line-height: 0.82;
+  }
+
+
+  .process-intro {
+
+    margin:
+      30px
+      0
+      0
+      30px;
+
+    min-width: 0;
+  }
+
+
+  /* Mobile timeline */
+
+  .process-track {
+
+    top: 0;
+
+    left: 15px;
+
+    width: 1px;
+
+    height: 100%;
+
+    right: auto;
+  }
+
+
+  .process-track-progress {
+
+    width: 100% !important;
+
+    height: 0;
+
+    transition: none;
+  }
+
+
+  .process-steps {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0;
+  }
+
+
+  .process-step {
+
+    display: grid;
+
+    grid-template-columns:
+      35px
+      25px
+      1fr;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-height: 85px;
+
+    padding: 0;
+
+    text-align: left;
+  }
+
+
+  .process-step-number {
+
+    grid-column: 1;
+
+    font-size: 7px;
+  }
+
+
+  .process-step-dot {
+
+    grid-column: 2;
+
+    width: 9px;
+    height: 9px;
+  }
+
+
+  .process-step-title {
+
+    grid-column: 3;
+
+    font-size: 16px;
+  }
+
+
+  .process-step:hover
+  .process-step-title,
+  .process-step.active
+  .process-step-title {
+
+    transform: none;
+  }
+
+
+  /* Detail */
+
+  .process-detail {
+
+    display: block;
+
+    margin-top: 45px;
+
+    padding:
+      35px
+      0;
+  }
+
+
+  .process-detail-number {
+
+    margin-bottom: 25px;
+
+    font-size: 8px;
+  }
+
+
+  .process-detail-main h3 {
+
+    font-size: 12vw;
+  }
+
+
+  .process-detail-description {
+
+    margin-top: 20px;
+
+    font-size: 9px;
+
+    line-height: 1.8;
+  }
+
+
+  .process-frame {
+
+    width: 100%;
+
+    margin-top: 35px;
+  }
+
+
+  .process-bottom {
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 70px;
+
+    font-size: 6px;
+  }
+
+
+  .process-bottom strong {
+
+    font-size: 9px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .process-section {
+
+    padding:
+      90px
+      5vw
+      80px;
+  }
+
+
+  .process-heading h2 {
+
+    font-size: 16.5vw;
+  }
+
+
+  .process-step-title {
+
+    font-size: 14px;
+  }
+
+
+  .process-detail-main h3 {
+
+    font-size: 13vw;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .process-frame-lines span,
+  .process-playhead {
+
+    animation: none;
+  }
+
+}

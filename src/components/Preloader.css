@@ -1,0 +1,335 @@
+/* =========================================================
+   PRELOADER
+========================================================= */
+
+.preloader {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 99999;
+
+  width: 100%;
+  height: 100vh;
+
+  background: #050505;
+
+  color: #f2f1ed;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  padding: 35px 5vw;
+
+  overflow: hidden;
+
+  transition:
+    opacity 0.8s ease,
+    visibility 0.8s ease,
+    transform 1s cubic-bezier(.77,0,.18,1);
+}
+
+
+/* =========================================================
+   COMPLETE ANIMATION
+========================================================= */
+
+.preloader.complete {
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateY(-100%);
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.preloader-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  color: #666;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 0.13em;
+}
+
+
+/* =========================================================
+   CENTER
+========================================================= */
+
+.preloader-center {
+  width: 100%;
+
+  max-width: 1400px;
+
+  margin: auto;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.preloader-title {
+  display: flex;
+
+  flex-direction: column;
+
+  font-size: clamp(
+    70px,
+    15vw,
+    230px
+  );
+
+  font-weight: 900;
+
+  line-height: 0.72;
+
+  letter-spacing: -0.09em;
+
+  text-transform: uppercase;
+}
+
+
+.preloader-title span:first-child {
+  color: #f2f1ed;
+}
+
+
+.preloader-title span:last-child {
+  color: transparent;
+
+  -webkit-text-stroke: 1px #555;
+}
+
+
+/* =========================================================
+   ROLE
+========================================================= */
+
+.preloader-role {
+  margin-top: 35px;
+
+  color: #d8ff3e;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 11px;
+
+  letter-spacing: 0.2em;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.preloader-timeline {
+  margin-top: 70px;
+
+  width: 100%;
+}
+
+
+/* Timeline info */
+
+.timeline-info {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+
+  color: #777;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* Timeline track */
+
+.timeline-track {
+  position: relative;
+
+  width: 100%;
+
+  height: 3px;
+
+  background: #222;
+}
+
+
+/* Progress */
+
+.timeline-progress {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  height: 100%;
+
+  background: #d8ff3e;
+
+  box-shadow:
+    0 0 12px rgba(216,255,62,0.8),
+    0 0 30px rgba(216,255,62,0.25);
+
+  transition: width 0.08s linear;
+}
+
+
+/* Timeline head */
+
+.timeline-head {
+  position: absolute;
+
+  top: 50%;
+
+  width: 8px;
+  height: 8px;
+
+  background: #ffffff;
+
+  transform:
+    translate(-50%, -50%);
+
+  box-shadow:
+    0 0 15px #ffffff;
+
+  transition: left 0.08s linear;
+}
+
+
+/* =========================================================
+   TIMELINE LABELS
+========================================================= */
+
+.timeline-labels {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 14px;
+
+  color: #444;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.12em;
+}
+
+
+.timeline-labels span:last-child {
+  color: #d8ff3e;
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.preloader-bottom {
+  display: flex;
+
+  justify-content: space-between;
+
+  color: #555;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.13em;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .preloader {
+    padding:
+      25px
+      6vw;
+  }
+
+
+  .preloader-top {
+    font-size: 7px;
+  }
+
+
+  .preloader-title {
+    font-size: 23vw;
+  }
+
+
+  .preloader-title span:last-child {
+    -webkit-text-stroke: 0.7px #555;
+  }
+
+
+  .preloader-role {
+    margin-top: 25px;
+
+    font-size: 8px;
+  }
+
+
+  .preloader-timeline {
+    margin-top: 50px;
+  }
+
+
+  .timeline-labels {
+    font-size: 6px;
+  }
+
+
+  .preloader-bottom {
+    font-size: 6px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .preloader-title {
+    font-size: 24vw;
+  }
+
+
+  .timeline-labels span:nth-child(2),
+  .timeline-labels span:nth-child(4) {
+    display: none;
+  }
+
+}

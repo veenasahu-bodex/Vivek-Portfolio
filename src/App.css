@@ -1,0 +1,675 @@
+/* =========================================================
+   VIVEK SAHU — GLOBAL APP STYLES
+   CINEMATIC VIDEO EDITOR PORTFOLIO
+========================================================= */
+
+
+/* =========================================================
+   GOOGLE FONTS
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+
+  --bg: #050505;
+
+  --bg-soft: #080808;
+
+  --text: #eeeeee;
+
+  --text-soft: #888888;
+
+  --text-muted: #444444;
+
+  --accent: #d8ff3e;
+
+  --border: rgba(255,255,255,0.08);
+
+  --border-soft: rgba(255,255,255,0.05);
+
+  --mono: "DM Mono", monospace;
+
+  --sans: "Inter", sans-serif;
+
+  --ease:
+    cubic-bezier(.16, 1, .3, 1);
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+
+html {
+
+  width: 100%;
+
+  min-height: 100%;
+
+  background: var(--bg);
+
+  scroll-behavior: smooth;
+
+}
+
+
+body {
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  background: var(--bg);
+
+  color: var(--text);
+
+  font-family: var(--sans);
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+
+  text-rendering: optimizeLegibility;
+}
+
+
+/* =========================================================
+   ROOT APP
+========================================================= */
+
+#root {
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  overflow-x: hidden;
+}
+
+
+main {
+
+  width: 100%;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+section {
+
+  position: relative;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+
+  color: inherit;
+
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+button,
+a {
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+button {
+
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   IMAGES
+========================================================= */
+
+img {
+
+  display: block;
+
+  max-width: 100%;
+
+  height: auto;
+}
+
+
+/* =========================================================
+   VIDEOS
+========================================================= */
+
+video {
+
+  display: block;
+
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   TEXT SELECTION
+========================================================= */
+
+::selection {
+
+  color: #050505;
+
+  background: var(--accent);
+}
+
+
+::-moz-selection {
+
+  color: #050505;
+
+  background: var(--accent);
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+
+  width: 5px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+  background: #050505;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+  background: #292929;
+
+  border-radius: 10px;
+
+  transition:
+    background 0.3s ease;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+  background: var(--accent);
+}
+
+
+/* Firefox */
+
+html {
+
+  scrollbar-width: thin;
+
+  scrollbar-color:
+    #292929
+    #050505;
+}
+
+
+/* =========================================================
+   GLOBAL GRAIN
+========================================================= */
+
+body::before {
+
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9990;
+
+  pointer-events: none;
+
+  opacity: 0.035;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.8'/%3E%3C/svg%3E");
+
+  mix-blend-mode: soft-light;
+}
+
+
+/* =========================================================
+   CINEMATIC VIGNETTE
+========================================================= */
+
+body::after {
+
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9989;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at center,
+      transparent 40%,
+      rgba(0,0,0,0.22) 100%
+    );
+}
+
+
+/* =========================================================
+   GLOBAL UTILITY
+========================================================= */
+
+.container {
+
+  width: 100%;
+
+  max-width: 1400px;
+
+  margin:
+    0 auto;
+
+  padding:
+    0 5vw;
+}
+
+
+.mono {
+
+  font-family: var(--mono);
+}
+
+
+.accent {
+
+  color: var(--accent);
+}
+
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.section-label {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  color: var(--text-muted);
+
+  font-family: var(--mono);
+
+  font-size: 7px;
+
+  letter-spacing: 0.15em;
+
+  text-transform: uppercase;
+}
+
+
+.section-label::before {
+
+  content: "";
+
+  width: 5px;
+
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+
+  box-shadow:
+    0 0 12px
+    rgba(216,255,62,0.5);
+}
+
+
+/* =========================================================
+   GLOBAL BUTTON
+========================================================= */
+
+.btn {
+
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  min-height: 55px;
+
+  padding:
+    0 24px;
+
+  border: 1px solid var(--border);
+
+  background: transparent;
+
+  color: var(--text);
+
+  font-family: var(--mono);
+
+  font-size: 7px;
+
+  letter-spacing: 0.12em;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transition:
+    color 0.4s var(--ease),
+    transform 0.4s var(--ease),
+    border-color 0.4s ease;
+}
+
+
+.btn::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: var(--accent);
+
+  transform:
+    translateY(101%);
+
+  transition:
+    transform 0.5s var(--ease);
+}
+
+
+.btn span,
+.btn strong {
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+.btn:hover {
+
+  color: #050505;
+
+  border-color: var(--accent);
+
+  transform:
+    translateY(-3px);
+}
+
+
+.btn:hover::before {
+
+  transform:
+    translateY(0);
+}
+
+
+/* =========================================================
+   HORIZONTAL LINE
+========================================================= */
+
+.line {
+
+  width: 100%;
+
+  height: 1px;
+
+  background:
+    var(--border);
+}
+
+
+/* =========================================================
+   GLOW
+========================================================= */
+
+.glow {
+
+  box-shadow:
+    0 0 50px
+    rgba(216,255,62,0.05);
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+:focus-visible {
+
+  outline:
+
+    1px solid
+    var(--accent);
+
+  outline-offset: 5px;
+}
+
+
+/* =========================================================
+   NOISE / OVERLAY HELPERS
+========================================================= */
+
+.noise {
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+.noise::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+
+  opacity: 0.05;
+
+  mix-blend-mode: overlay;
+}
+
+
+/* =========================================================
+   CURSOR SUPPORT
+========================================================= */
+
+@media (pointer: fine) {
+
+  body {
+
+    cursor: none;
+  }
+
+
+  a,
+  button {
+
+    cursor: none;
+  }
+
+}
+
+
+@media (pointer: coarse) {
+
+  body {
+
+    cursor: auto;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  html {
+
+    scroll-behavior: smooth;
+  }
+
+
+  body {
+
+    overflow-x: hidden;
+
+    font-size: 14px;
+  }
+
+
+  body::before {
+
+    opacity: 0.025;
+  }
+
+
+  body::after {
+
+    background:
+      radial-gradient(
+        circle at center,
+        transparent 50%,
+        rgba(0,0,0,0.16) 100%
+      );
+  }
+
+
+  .container {
+
+    padding:
+      0 6vw;
+  }
+
+
+  .section-label {
+
+    font-size: 6px;
+
+    gap: 12px;
+  }
+
+
+  .btn {
+
+    min-height: 52px;
+
+    font-size: 6px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .container {
+
+    padding:
+      0 5vw;
+  }
+
+
+  .section-label {
+
+    font-size: 5px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+
+    scroll-behavior: auto;
+  }
+
+
+  *,
+  *::before,
+  *::after {
+
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+
+    scroll-behavior: auto !important;
+  }
+
+}

@@ -1,0 +1,738 @@
+/* =========================================
+   SHOWREEL SECTION
+========================================= */
+
+.showreel {
+  position: relative;
+  width: 100%;
+  padding: 100px 4vw 0;
+  background: #080808;
+  color: #fff;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.showreel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 45px;
+}
+
+.showreel-label {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.showreel-number {
+  color: #ff4d00;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.showreel-year {
+  font-size: 9px;
+  letter-spacing: 1.8px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.showreel-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-bottom: 45px;
+}
+
+.showreel-intro h2 {
+  margin: 0;
+
+  font-size: clamp(70px, 10vw, 150px);
+  line-height: 0.78;
+
+  font-weight: 800;
+  letter-spacing: -7px;
+}
+
+.showreel-intro h2 span {
+  color: #ff4d00;
+}
+
+.showreel-intro p {
+  max-width: 320px;
+
+  margin: 0 5vw 5px 0;
+
+  font-size: 11px;
+  line-height: 1.7;
+
+  letter-spacing: 1px;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+
+/* =========================================
+   SLIDER CONTROLS
+========================================= */
+
+.slider-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 18px;
+}
+
+.slider-count {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.slider-arrows {
+  display: flex;
+  gap: 8px;
+}
+
+.slider-arrows button {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  background: transparent;
+  color: #fff;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.slider-arrows button:hover {
+  background: #ff4d00;
+  border-color: #ff4d00;
+  color: #fff;
+}
+
+
+/* =========================================
+   VIDEO SLIDER
+========================================= */
+
+.video-slider {
+  display: flex;
+
+  gap: 18px;
+
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+
+  scroll-snap-type: x mandatory;
+
+  padding: 5px 0 20px;
+
+  scrollbar-width: none;
+}
+
+.video-slider::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================
+   VIDEO CARD
+========================================= */
+
+.video-card {
+  position: relative;
+
+  flex: 0 0 380px;
+
+  /*
+    HEIGHT BADHA DI HAI
+    VIDEO PURA DIKHANE KE LIYE
+  */
+  height: 570px;
+
+  overflow: hidden;
+
+  background: #111;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  scroll-snap-align: start;
+
+  cursor: default;
+
+  transition:
+    transform 0.45s ease,
+    border-color 0.45s ease;
+}
+
+.video-card:hover {
+  border-color: rgba(255, 77, 0, 0.6);
+}
+
+
+/* =========================================
+   VIDEO
+========================================= */
+
+.portfolio-video {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  /*
+    IMPORTANT
+    contain = video crop nahi hoga
+  */
+  object-fit: contain;
+
+  object-position: center;
+
+  display: block;
+
+  background: #050505;
+
+  z-index: 1;
+}
+
+
+/* =========================================
+   VIDEO OVERLAY
+========================================= */
+
+.video-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.55),
+      transparent 25%,
+      transparent 65%,
+      rgba(0, 0, 0, 0.75)
+    );
+}
+
+
+/* =========================================
+   TOP INFORMATION
+========================================= */
+
+.video-top {
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+  right: 18px;
+
+  z-index: 5;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  pointer-events: none;
+}
+
+.video-top span:first-child {
+  color: #ff4d00;
+}
+
+
+/* =========================================
+   PLAY BUTTON
+========================================= */
+
+.video-play {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 6;
+
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  padding: 0;
+}
+
+.play-circle {
+  width: 62px;
+  height: 62px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+
+  background: rgba(0, 0, 0, 0.35);
+
+  backdrop-filter: blur(5px);
+
+  color: #fff;
+
+  font-size: 16px;
+
+  padding-left: 3px;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.video-play:hover .play-circle {
+  background: #ff4d00;
+  border-color: #ff4d00;
+
+  transform: scale(1.08);
+}
+
+
+/* =========================================
+   BOTTOM INFORMATION
+========================================= */
+
+.video-bottom {
+  position: absolute;
+
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+
+.video-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  color: #ff4d00;
+}
+
+.video-bottom h3 {
+  margin: 0;
+
+  font-size: 19px;
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+
+  color: #fff;
+}
+
+
+/* =========================================
+   PLAYING STATE
+========================================= */
+
+.video-card.playing {
+  border-color: rgba(255, 77, 0, 0.7);
+}
+
+.video-card.playing .video-overlay {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.25),
+      transparent 30%,
+      transparent 70%,
+      rgba(0, 0, 0, 0.65)
+    );
+}
+
+
+/* =========================================
+   BOTTOM STATEMENT
+========================================= */
+
+.showreel-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  padding: 70px 0 65px;
+}
+
+.showreel-statement {
+  font-size: clamp(25px, 3vw, 45px);
+
+  font-weight: 700;
+
+  letter-spacing: -1.5px;
+}
+
+.showreel-statement em {
+  color: #ff4d00;
+  font-style: normal;
+}
+
+.showreel-description {
+  font-size: 10px;
+
+  line-height: 1.7;
+
+  letter-spacing: 1px;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  text-align: right;
+}
+
+
+/* =========================================
+   MARQUEE
+========================================= */
+
+.showreel-marquee {
+  width: 100%;
+
+  margin-left: -4vw;
+
+  width: calc(100% + 8vw);
+
+  overflow: hidden;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  padding: 18px 0;
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+
+  width: max-content;
+
+  gap: 28px;
+
+  white-space: nowrap;
+
+  animation: marqueeMove 22s linear infinite;
+}
+
+.marquee-track span {
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.marquee-track i {
+  font-style: normal;
+
+  font-size: 10px;
+
+  color: #ff4d00;
+}
+
+
+/* =========================================
+   MARQUEE ANIMATION
+========================================= */
+
+@keyframes marqueeMove {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .showreel {
+    padding: 90px 5vw 0;
+  }
+
+  .video-card {
+    flex: 0 0 340px;
+    height: 520px;
+  }
+
+  .showreel-intro h2 {
+    font-size: clamp(65px, 12vw, 110px);
+  }
+
+  .showreel-intro p {
+    margin-right: 0;
+  }
+
+  .showreel-marquee {
+    margin-left: -5vw;
+    width: calc(100% + 10vw);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .showreel {
+    padding: 80px 5vw 0;
+  }
+
+
+  /* Header */
+
+  .showreel-header {
+    margin-bottom: 35px;
+  }
+
+  .showreel-label {
+    gap: 12px;
+
+    font-size: 9px;
+  }
+
+  .showreel-year {
+    display: none;
+  }
+
+
+  /* Intro */
+
+  .showreel-intro {
+    display: block;
+
+    margin-bottom: 35px;
+  }
+
+  .showreel-intro h2 {
+    font-size: clamp(65px, 18vw, 100px);
+
+    letter-spacing: -5px;
+  }
+
+  .showreel-intro p {
+    margin: 25px 0 0;
+
+    max-width: 280px;
+
+    font-size: 10px;
+  }
+
+
+  /* Controls */
+
+  .slider-controls {
+    margin-bottom: 15px;
+  }
+
+  .slider-arrows button {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  /* Slider */
+
+  .video-slider {
+    gap: 12px;
+
+    padding-bottom: 15px;
+  }
+
+
+  /* Video Card */
+
+  .video-card {
+    flex: 0 0 78vw;
+
+    /*
+      MOBILE PAR BHI HEIGHT BADHAI
+    */
+    height: 110vw;
+
+    min-height: 480px;
+    max-height: 620px;
+  }
+
+
+  .video-top {
+    top: 15px;
+    left: 15px;
+    right: 15px;
+  }
+
+  .video-bottom {
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .video-bottom h3 {
+    font-size: 17px;
+  }
+
+
+  /* Bottom */
+
+  .showreel-bottom {
+    display: block;
+
+    padding: 50px 0;
+  }
+
+  .showreel-statement {
+    font-size: 28px;
+  }
+
+  .showreel-description {
+    margin-top: 18px;
+
+    text-align: left;
+
+    font-size: 9px;
+  }
+
+
+  /* Marquee */
+
+  .showreel-marquee {
+    margin-left: -5vw;
+
+    width: calc(100% + 10vw);
+
+    padding: 15px 0;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .showreel {
+    padding-top: 70px;
+  }
+
+  .video-card {
+    flex: 0 0 82vw;
+
+    height: 115vw;
+
+    min-height: 450px;
+  }
+
+  .play-circle {
+    width: 56px;
+    height: 56px;
+  }
+
+  .video-bottom h3 {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .video-slider {
+    scroll-behavior: auto;
+  }
+
+  .marquee-track {
+    animation: none;
+  }
+
+  .video-card,
+  .video-play,
+  .play-circle {
+    transition: none;
+  }
+}

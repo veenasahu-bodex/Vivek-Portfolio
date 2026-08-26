@@ -1,0 +1,769 @@
+/* =========================================================
+   BEFORE / AFTER
+========================================================= */
+
+.before-after {
+  position: relative;
+
+  width: 100%;
+
+  padding:
+    160px
+    5vw
+    150px;
+
+  background: #090909;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.before-after-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  margin-bottom: 65px;
+}
+
+
+.before-after-title {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 25px;
+}
+
+
+.before-after-number {
+  margin-top: 15px;
+
+  color: #d8ff3e;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 0.1em;
+}
+
+
+.small-label {
+  margin: 0 0 15px;
+
+  color: #555;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  letter-spacing: 0.16em;
+}
+
+
+.before-after-title h2 {
+  margin: 0;
+
+  color: #eeeeea;
+
+  font-size:
+    clamp(
+      65px,
+      9vw,
+      150px
+    );
+
+  font-weight: 900;
+
+  line-height: 0.8;
+
+  letter-spacing: -0.08em;
+}
+
+
+.before-after-title h2 span {
+  color: #d8ff3e;
+
+  font-family: Georgia, serif;
+
+  font-weight: 400;
+
+  font-style: italic;
+}
+
+
+.before-after-intro {
+  margin: 0;
+
+  color: #666;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  line-height: 1.8;
+
+  letter-spacing: 0.06em;
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   COMPARISON WRAPPER
+========================================================= */
+
+.comparison-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  height: min(
+    68vh,
+    760px
+  );
+
+  min-height: 480px;
+
+  overflow: hidden;
+
+  background: #111;
+
+  cursor: ew-resize;
+
+  user-select: none;
+
+  touch-action: none;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.1);
+}
+
+
+/* =========================================================
+   IMAGES
+========================================================= */
+
+.comparison-final,
+.comparison-raw {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+}
+
+
+.comparison-final img,
+.comparison-raw img {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  pointer-events: none;
+}
+
+
+.comparison-final img {
+  filter:
+    saturate(1.25)
+    contrast(1.15)
+    brightness(0.85);
+}
+
+
+.comparison-raw img {
+  width: 100vw;
+
+  max-width: none;
+
+  filter:
+    saturate(0.25)
+    contrast(0.85)
+    brightness(0.75);
+}
+
+
+/* =========================================================
+   CINEMATIC OVERLAY
+========================================================= */
+
+.comparison-final::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.2),
+      transparent 40%,
+      rgba(0,0,0,0.3)
+    );
+
+  z-index: 2;
+}
+
+
+.comparison-raw::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 3px,
+      rgba(255,255,255,0.025) 4px
+    );
+}
+
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+.comparison-label {
+  position: absolute;
+
+  top: 25px;
+
+  z-index: 10;
+
+  padding:
+    8px
+    12px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.15em;
+}
+
+
+.final-label {
+  right: 25px;
+
+  color: #050505;
+
+  background: #d8ff3e;
+}
+
+
+.raw-label {
+  left: 25px;
+
+  color: #fff;
+
+  background:
+    rgba(0,0,0,0.55);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.2);
+}
+
+
+/* =========================================================
+   FINAL INFO
+========================================================= */
+
+.final-info {
+  position: absolute;
+
+  right: 25px;
+  bottom: 25px;
+
+  z-index: 10;
+
+  display: flex;
+
+  gap: 10px;
+}
+
+
+.final-info span {
+  padding:
+    6px
+    9px;
+
+  color: rgba(255,255,255,0.7);
+
+  background:
+    rgba(0,0,0,0.35);
+
+  backdrop-filter: blur(8px);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 6px;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   HANDLE
+========================================================= */
+
+.comparison-handle {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  z-index: 20;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
+}
+
+
+.handle-line {
+  width: 1px;
+
+  flex: 1;
+
+  min-height: 40px;
+
+  background: #d8ff3e;
+
+  box-shadow:
+    0 0 12px
+    rgba(216,255,62,0.6);
+}
+
+
+.handle-circle {
+  width: 56px;
+  height: 56px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 3px;
+
+  color: #050505;
+
+  background: #d8ff3e;
+
+  box-shadow:
+    0 0 30px
+    rgba(216,255,62,0.2);
+
+  font-size: 18px;
+
+  font-weight: 500;
+}
+
+
+.handle-circle span {
+  line-height: 1;
+}
+
+
+/* =========================================================
+   PERCENTAGE
+========================================================= */
+
+.comparison-percentage {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 25px;
+
+  z-index: 30;
+
+  transform: translateX(-50%);
+
+  padding:
+    7px
+    10px;
+
+  color: #fff;
+
+  background:
+    rgba(0,0,0,0.45);
+
+  backdrop-filter: blur(10px);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* =========================================================
+   BOTTOM SKILLS
+========================================================= */
+
+.comparison-skills {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 40px;
+
+  margin-top: 70px;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,0.1);
+}
+
+
+.comparison-skill {
+  position: relative;
+
+  padding-top: 25px;
+}
+
+
+.comparison-skill span {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: #d8ff3e;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+}
+
+
+.comparison-skill strong {
+  display: block;
+
+  color: #ddd;
+
+  font-size: 14px;
+
+  letter-spacing: 0.02em;
+}
+
+
+.comparison-skill p {
+  max-width: 260px;
+
+  margin-top: 12px;
+
+  color: #555;
+
+  font-size: 10px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   DRAG INSTRUCTION
+========================================================= */
+
+.drag-instruction {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: 60px;
+
+  color: #444;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 7px;
+
+  letter-spacing: 0.16em;
+}
+
+
+.drag-arrow {
+  color: #d8ff3e;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .before-after {
+    padding:
+      120px
+      4vw
+      120px;
+  }
+
+
+  .before-after-title h2 {
+    font-size: 12vw;
+  }
+
+
+  .comparison-wrapper {
+    height: 58vh;
+
+    min-height: 430px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .before-after {
+    padding:
+      100px
+      6vw
+      100px;
+  }
+
+
+  .before-after-header {
+    display: block;
+
+    margin-bottom: 45px;
+  }
+
+
+  .before-after-title {
+    gap: 12px;
+  }
+
+
+  .before-after-number {
+    margin-top: 8px;
+
+    font-size: 7px;
+  }
+
+
+  .small-label {
+    margin-bottom: 12px;
+
+    font-size: 7px;
+  }
+
+
+  .before-after-title h2 {
+    font-size: 16vw;
+
+    line-height: 0.85;
+  }
+
+
+  .before-after-intro {
+    margin:
+      25px
+      0
+      0
+      30px;
+
+    text-align: left;
+
+    font-size: 8px;
+  }
+
+
+  .comparison-wrapper {
+
+    height: 62vh;
+
+    min-height: 420px;
+  }
+
+
+  .comparison-label {
+    top: 15px;
+
+    padding:
+      7px
+      9px;
+
+    font-size: 6px;
+  }
+
+
+  .raw-label {
+    left: 15px;
+  }
+
+
+  .final-label {
+    right: 15px;
+  }
+
+
+  .final-info {
+    right: 15px;
+
+    bottom: 15px;
+
+    gap: 5px;
+  }
+
+
+  .final-info span {
+    padding:
+      5px
+      7px;
+
+    font-size: 5px;
+  }
+
+
+  .handle-circle {
+    width: 48px;
+    height: 48px;
+
+    font-size: 16px;
+  }
+
+
+  .comparison-skills {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+
+    margin-top: 50px;
+  }
+
+
+  .comparison-skill {
+    padding:
+      25px
+      0;
+
+    border-bottom:
+      1px solid
+      rgba(255,255,255,0.08);
+  }
+
+
+  .comparison-skill:last-child {
+    border-bottom: none;
+  }
+
+
+  .comparison-skill strong {
+    font-size: 13px;
+  }
+
+
+  .comparison-skill p {
+    max-width: 90%;
+
+    font-size: 9px;
+  }
+
+
+  .drag-instruction {
+    margin-top: 45px;
+
+    font-size: 6px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .before-after {
+    padding:
+      90px
+      5vw
+      80px;
+  }
+
+
+  .before-after-title h2 {
+    font-size: 17vw;
+  }
+
+
+  .comparison-wrapper {
+    height: 58vh;
+
+    min-height: 360px;
+  }
+
+
+  .handle-circle {
+    width: 44px;
+    height: 44px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .comparison-final,
+  .comparison-raw,
+  .comparison-handle {
+    transition: none;
+  }
+
+}
