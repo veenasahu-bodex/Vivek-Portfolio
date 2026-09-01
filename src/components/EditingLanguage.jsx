@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./EditingLanguage.css";
+import "./editingLanguage.css";
 
 const editingStyles = [
   {
