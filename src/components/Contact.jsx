@@ -57,7 +57,7 @@ function Contact() {
 
 
           <a
-            href="tel:+919876545678"
+            href="tel:+917067520692"
             className="contact-secondary"
           >
             <span>CALL ME</span>
