@@ -40,7 +40,6 @@ function EditingLanguage() {
         {String(active + 1).padStart(2, "0")}
       </div>
 
-
       {/* Header */}
       <div className="language-header">
 
