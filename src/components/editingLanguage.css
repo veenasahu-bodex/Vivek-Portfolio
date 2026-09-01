@@ -18,7 +18,6 @@
   overflow: hidden;
 }
 
-
 /* =========================================================
    BACKGROUND NUMBER
 ========================================================= */
@@ -53,7 +52,6 @@
   user-select: none;
 }
 
-
 /* =========================================================
    HEADER
 ========================================================= */
@@ -72,7 +70,6 @@
   margin-bottom: 100px;
 }
 
-
 .language-heading {
   display: flex;
 
@@ -80,7 +77,6 @@
 
   gap: 25px;
 }
-
 
 .language-section-number {
   margin-top: 15px;
@@ -94,7 +90,6 @@
   letter-spacing: 0.1em;
 }
 
-
 .language-eyebrow {
   margin: 0 0 18px;
 
@@ -106,7 +101,6 @@
 
   letter-spacing: 0.16em;
 }
-
 
 .language-heading h2 {
   margin: 0;
@@ -127,7 +121,6 @@
   letter-spacing: -0.085em;
 }
 
-
 .language-heading h2 em {
   color: transparent;
 
@@ -146,14 +139,12 @@
     -webkit-text-stroke-color 0.5s ease;
 }
 
-
 .language-heading:hover h2 em {
   color: rgba(216,255,62,0.05);
 
   -webkit-text-stroke-color:
     #d8ff3e;
 }
-
 
 .language-intro {
   margin: 0;
@@ -171,7 +162,6 @@
   text-align: right;
 }
 
-
 /* =========================================================
    LIST
 ========================================================= */
@@ -187,7 +177,6 @@
     1px solid
     rgba(255,255,255,0.12);
 }
-
 
 /* =========================================================
    ITEM
@@ -221,7 +210,6 @@
     padding 0.5s ease;
 }
 
-
 .language-item::before {
   content: "";
 
@@ -239,7 +227,6 @@
     width 0.5s cubic-bezier(.16,1,.3,1);
 }
 
-
 .language-item:hover,
 .language-item.active {
 
@@ -255,12 +242,10 @@
     );
 }
 
-
 .language-item:hover::before,
 .language-item.active::before {
   width: 2px;
 }
-
 
 /* =========================================================
    NUMBER
@@ -277,12 +262,10 @@
     color 0.3s ease;
 }
 
-
 .language-item:hover .language-number,
 .language-item.active .language-number {
   color: #d8ff3e;
 }
-
 
 /* =========================================================
    TITLE
@@ -309,7 +292,6 @@
     transform 0.6s cubic-bezier(.16,1,.3,1);
 }
 
-
 .language-item:hover .language-title,
 .language-item.active .language-title {
   color: #eee;
@@ -317,7 +299,6 @@
   transform:
     translateX(12px);
 }
-
 
 /* =========================================================
    DESCRIPTION
@@ -342,7 +323,6 @@
     transform 0.6s cubic-bezier(.16,1,.3,1);
 }
 
-
 .language-item:hover .language-description,
 .language-item.active .language-description {
   color: #777;
@@ -352,7 +332,6 @@
   transform:
     translateY(0);
 }
-
 
 /* =========================================================
    ICON
@@ -388,7 +367,6 @@
     transform 0.5s cubic-bezier(.16,1,.3,1);
 }
 
-
 .language-item:hover .language-icon,
 .language-item.active .language-icon {
 
@@ -401,7 +379,6 @@
   transform:
     rotate(0deg);
 }
-
 
 /* =========================================================
    FOOTER STATEMENT
@@ -430,7 +407,6 @@
   letter-spacing: 0.16em;
 }
 
-
 .language-line {
 
   position: relative;
@@ -444,7 +420,6 @@
 
   overflow: hidden;
 }
-
 
 .language-line span {
 
@@ -463,7 +438,6 @@
     infinite;
 }
 
-
 @keyframes languageLine {
 
   0% {
@@ -480,7 +454,6 @@
 
 }
 
-
 /* =========================================================
    TABLET
 ========================================================= */
@@ -493,17 +466,13 @@
       4vw
       120px;
   }
-
-
   .language-heading h2 {
     font-size: 12vw;
   }
 
-
   .language-header {
     margin-bottom: 75px;
   }
-
 
   .language-item {
     grid-template-columns:
@@ -515,13 +484,11 @@
     gap: 20px;
   }
 
-
   .language-title {
     font-size: 4.5vw;
   }
 
 }
-
 
 /* =========================================================
    MOBILE
@@ -538,7 +505,6 @@
       100px;
   }
 
-
   .language-bg-number {
     top: 25%;
 
@@ -547,7 +513,6 @@
     font-size: 100vw;
   }
 
-
   .language-header {
 
     display: block;
@@ -555,12 +520,10 @@
     margin-bottom: 60px;
   }
 
-
   .language-heading {
 
     gap: 12px;
   }
-
 
   .language-section-number {
 
@@ -569,7 +532,6 @@
     font-size: 7px;
   }
 
-
   .language-eyebrow {
 
     margin-bottom: 13px;
@@ -577,14 +539,12 @@
     font-size: 7px;
   }
 
-
   .language-heading h2 {
 
     font-size: 16vw;
 
     line-height: 0.8;
   }
-
 
   .language-intro {
 
@@ -598,7 +558,6 @@
 
     font-size: 8px;
   }
-
 
   /* Mobile list */
 
@@ -620,7 +579,6 @@
       0;
   }
 
-
   .language-item:hover,
   .language-item.active {
 
@@ -628,7 +586,6 @@
 
     padding-left: 15px;
   }
-
 
   .language-number {
 
@@ -639,7 +596,6 @@
     font-size: 7px;
   }
 
-
   .language-title {
 
     font-size: 8vw;
@@ -647,13 +603,11 @@
     line-height: 0.9;
   }
 
-
   .language-item:hover .language-title,
   .language-item.active .language-title {
 
     transform: none;
   }
-
 
   .language-description {
 
@@ -667,8 +621,6 @@
 
     line-height: 1.65;
   }
-
-
   .language-icon {
 
     width: 32px;
@@ -679,7 +631,6 @@
     align-self: flex-start;
   }
 
-
   .language-footer {
 
     margin-top: 70px;
@@ -689,7 +640,6 @@
     font-size: 6px;
   }
 
-
   .language-line {
 
     flex: 1;
@@ -698,7 +648,6 @@
   }
 
 }
-
 
 /* =========================================================
    SMALL MOBILE
@@ -714,12 +663,10 @@
       80px;
   }
 
-
   .language-heading h2 {
 
     font-size: 17vw;
   }
-
 
   .language-item {
 
@@ -729,14 +676,12 @@
       30px;
   }
 
-
   .language-title {
 
     font-size: 8.5vw;
   }
 
 }
-
 
 /* =========================================================
    REDUCED MOTION
