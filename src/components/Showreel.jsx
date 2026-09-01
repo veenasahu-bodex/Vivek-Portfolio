@@ -108,120 +108,65 @@ const videos = [
 
 
   {
-    id: "19",
+    id: "18",
     title: "Brand Edit",
     category: "SHORT FROM",
     file: "/videos/v1.mp4",
   },
  {
-    id: "20",
+    id: "19",
     title: "Product ",
     category: "COMMERCIAL",
     file: "/videos/v5.mp4",
   },
 
   {
-    id: "21",
+    id: "20",
     title: "Product Edit",
     category: "REEL",
     file: "/videos/v6.mp4",
   },
   {
-    id: "22",
+    id: "21",
     title: "Product Edit",
     category: "AD",
     file: "/videos/v7.mp4",
   },
 
   {
-    id: "23",
+    id: "22",
     title: "Fashion Reel",
     category: "REEL",
     file: "/videos/v8.mp4",
   },
    {
-    id: "24",
+    id: "23",
     title: "Product ",
     category: "REEl",
     file: "/videos/v9.mp4",
   },
 
   {
-    id: "25",
+    id: "24",
     title: "AD Reel",
     category: "REEL",
     file: "/videos/v21.mp4",
   },
    
-   
 
-  {
-    id: "26",
-    title: "Commercial Reel",
-    category: "REEL",
-    file: "/videos/v12.mp4",
-  },
-  
    {
-    id: "27",
-    title: "Product Campaign",
-    category: "COMMERCIAL",
-    file: "/videos/v14.mp4",
-  },
-
-  {
-    id: "28",
-    title: "Social Media Reel",
-    category: "REEL",
-    file: "/videos/v15.mp4",
-  },
-   {
-    id: "29",
+    id: "25",
     title: "Fashion Reel",
     category: "REEL",
     file: "/videos/v16.mp4",
   },
-   {
-    id: "30",
-    title: "Product Campaign",
-    category: "COMMERCIAL",
-    file: "/videos/v17.mp4",
-  },
-
+  
   {
-    id: "31",
+    id: "26",
     title: "GYM Reel",
     category: "REEL",
     file: "/videos/v18.mp4",
   },
- 
-   {
-    id: "32",
-    title: "Brand Edit",
-    category: "COMMERCIAL",
-    file: "/videos/v20.mp4",
-  },
-
-  {
-    id: "33",
-    title: "Product Reel",
-    category: "PRODUCT",
-    file: "/videos/v24.mp4",
-  },
-
-   {
-    id: "34",
-    title: "AD Reel",
-    category: "AD",
-    file: "/videos/v22.mp4",
-  },
-   {
-    id: "35",
-    title: "Product Reel",
-    category: "COMMERCIAL",
-    file: "/videos/v23.mp4",
-  },
-
 
 ];
 
